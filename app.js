@@ -30,6 +30,9 @@ app.post('/sendMessage', (req, res) => {
 });
 
 app.post('/twilioReply', (req, res) => {
+    const json = JSON.stringify(req.body, null, 2);
+    console.log(json);
+
     twilioClient
         .messages
         .create({
