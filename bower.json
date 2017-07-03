@@ -1,0 +1,10 @@
+{
+  "name": "text-message-app",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Casey Ledbetter"
+  ],
+  "license": "ISC",
+  "homepage": ""
+}
