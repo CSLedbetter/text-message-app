@@ -13,7 +13,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.post('/sendMessage', (req, res) => {
-    const message = `Hello there you handsome man!`
+    const message = `Hello there you handsome man!
+        REPLY YES or NO if you agree
+    `
 
     twilioClient
         .messages
@@ -31,7 +33,7 @@ app.post('/twilioReply', (req, res) => {
     twilioClient
         .messages
         .create({
-            body: 'Got Reply',
+            body: req.body.body,
             to: myPhoneNumber, 
             from: '+18582511072' 
         })
