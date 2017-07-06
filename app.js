@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const Twilio = require('twilio');
-const myPhoneNumber = '+18586106178';
-const accountSid = 'AC3298223b18c68c680de310c11053895b';
-const authToken = '4e58511711196a1dce293db1f618992f';
+const myPhoneNumber = 'process.env.TWILIO_PHONE';
+const accountSid = 'process.env.TWILIO_ACCOUNT_SID'; 
+const authToken = 'process.env.TWILIO_AUTH_TOKEN'; 
 var twilioClient = new Twilio(accountSid, authToken);
 
 const port = process.env.PORT || 3000;
